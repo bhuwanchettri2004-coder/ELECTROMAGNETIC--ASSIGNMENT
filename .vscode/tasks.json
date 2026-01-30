@@ -1,0 +1,113 @@
+ {
+    "version": "2.0.0",
+    "tasks": [
+
+        /* ================= COULOMB ================= */
+        {
+            "label": "Compile Coulomb",
+            "type": "shell",
+            "command": "g++",
+            "args": ["-c","src/coulomb.cpp","-Iinclude","-o","coulomb.o"],
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Create Coulomb Library",
+            "type": "shell",
+            "command": "ar",
+            "args": ["rcs","libcoulomb.a","coulomb.o"],
+            "dependsOn": "Compile Coulomb"
+        },
+        {
+            "label": "Build Coulomb Example",
+            "type": "shell",
+            "command": "g++",
+            "args": ["example/test_coulomb.cpp","-Iinclude","-L.","-lcoulomb","-o","coulomb_test.exe"],
+            "dependsOn": "Create Coulomb Library"
+        },
+
+        /* ================= GAUSS ================= */
+        {
+            "label": "Compile Gauss",
+            "type": "shell",
+            "command": "g++",
+            "args": ["-c","src/gauss.cpp","-Iinclude","-o","gauss.o"],
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Create Gauss Library",
+            "type": "shell",
+            "command": "ar",
+            "args": ["rcs","libgauss.a","gauss.o"],
+            "dependsOn": "Compile Gauss"
+        },
+        {
+            "label": "Build Gauss Example",
+            "type": "shell",
+            "command": "g++",
+            "args": ["example/test_gauss.cpp","-Iinclude","-L.","-lgauss","-o","gauss_test.exe"],
+            "dependsOn": "Create Gauss Library"
+        },
+
+        /* ================= BIOT-SAVART ================= */
+        {
+            "label": "Compile Biot-Savart",
+            "type": "shell",
+            "command": "g++",
+            "args": ["-c","src/biot_savart.cpp","-Iinclude","-o","biot_savart.o"],
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Create Biot-Savart Library",
+            "type": "shell",
+            "command": "ar",
+            "args": ["rcs","libbiot_savart.a","biot_savart.o"],
+            "dependsOn": "Compile Biot-Savart"
+        },
+        {
+            "label": "Build Biot-Savart Example",
+            "type": "shell",
+            "command": "g++",
+            "args": ["example/test_biot_savart.cpp","-Iinclude","-L.","-lbiot_savart","-o","biot_savart_test.exe"],
+            "dependsOn": "Create Biot-Savart Library"
+        },
+
+        /* ================= MAXWELL ================= */
+        {
+            "label": "Compile Maxwell",
+            "type": "shell",
+            "command": "g++",
+            "args": ["-c","src/maxwell.cpp","-Iinclude","-o","maxwell.o"],
+            "problemMatcher": ["$gcc"]
+        },
+        {
+            "label": "Create Maxwell Library",
+            "type": "shell",
+            "command": "ar",
+            "args": ["rcs","libmaxwell.a","maxwell.o"],
+            "dependsOn": "Compile Maxwell"
+        },
+        {
+            "label": "Build Maxwell 1D Example",
+            "type": "shell",
+            "command": "g++",
+            "args": ["example/test_maxwell1d.cpp","-Iinclude","-L.","-lmaxwell","-o","maxwell1d_test.exe"],
+            "dependsOn": "Create Maxwell Library"
+        },
+        {
+            "label": "Build Maxwell 2D Example",
+            "type": "shell",
+            "command": "g++",
+            "args": ["example/test_maxwell2d.cpp","-Iinclude","-L.","-lmaxwell","-o","maxwell2d_test.exe"],
+            "dependsOn": "Create Maxwell Library"
+        },
+        {
+            "label": "Build Maxwell 3D Example",
+            "type": "shell",
+            "command": "g++",
+            "args": ["example/test_maxwell3d.cpp","-Iinclude","-L.","-lmaxwell","-o","maxwell3d_test.exe"],
+            "dependsOn": "Create Maxwell Library",
+            "group": {"kind":"build","isDefault":true}
+        }
+
+    ]
+}
