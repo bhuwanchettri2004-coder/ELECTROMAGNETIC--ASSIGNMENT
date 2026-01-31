@@ -72,7 +72,7 @@ B = (μ₀ I) / (2π r)
 - Direction is determined by the right-hand thumb rule  
 
 ### Computational Approach
-Magnetic field values are calculated for different distances and plotted to demonstrate magnetic field decay.
+Magnetic field values are calculated for different distances as numerical data to demonstrate magnetic field decay.
 
 ---
 
