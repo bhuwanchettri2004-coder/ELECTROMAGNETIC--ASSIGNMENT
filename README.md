@@ -1,14 +1,14 @@
-# ⚡ Electromagnetic Theory Library (C++)
+#  Electromagnetic Theory Library (C++)
 
 A comprehensive *C++ Electromagnetic Theory library* that numerically implements the *fundamental laws of electromagnetism* and visualizes their physical behavior using graphical plots.  
 This project bridges *theoretical electromagnetism* with *computational physics*.
 
-
-## 🎯 AIM
+-----
+##  AIM
 
 The aim of this project is to design and develop a modular *Electromagnetic Theory library in C++* that numerically implements the fundamental laws of electromagnetism—*Coulomb’s Law, Gauss’s Law, Biot–Savart Law, and Maxwell’s Equations (1D, 2D, and 3D)*—and to visualize their behavior through computational simulations and graphs.
 
-
+------
 ##  FEATURES
 
 ✔ Modular C++ library design  
@@ -17,7 +17,7 @@ The aim of this project is to design and develop a modular *Electromagnetic Theo
 ✔ Graphical visualization using *gnuplot*  
 ✔ Clean, academic, and extendable structure  
 
-
+------
 ##  THEORY
 
 Electromagnetism is a fundamental branch of physics that deals with the interaction of *electric charges, currents, electric fields, and magnetic fields*.  
@@ -32,11 +32,13 @@ Coulomb’s Law describes the *electrostatic force* between two stationary point
 
 ### Mathematical Form
 F = (1 / 4πϵ₀) × (q₁ q₂ / r²)
+---
 ### Physical Interpretation
 - Force is directly proportional to the product of charges  
 - Force is inversely proportional to the square of distance  
-- Like charges repel, unlike charges attract  
-
+- Like charges repel, unlike charges attract
+-  
+---
 ### Computational Approach
 The force is computed numerically for varying distances, and the inverse-square nature is verified through graphical plots.
 
@@ -47,3 +49,117 @@ The force is computed numerically for varying distances, and the inverse-square 
 Gauss’s Law relates the *electric flux* through a closed surface to the *total charge enclosed*.
 
 ### Mathematical Form
+∮ E · dA = Q / ϵ₀
+---
+### Physical Interpretation
+- Electric flux depends only on enclosed charge  
+- Independent of the shape of the Gaussian surface  
+- Demonstrates symmetry in electric fields  
+
+### Computational Approach
+Electric flux is computed numerically for different charge values and visualized to verify linear proportionality.
+
+---
+
+## (3️) Biot–Savart Law
+
+The Biot–Savart Law describes the *magnetic field produced by a steady electric current*.
+
+### Mathematical Form (Straight Current-Carrying Wire)
+B = (μ₀ I) / (2π r)
+---
+### Physical Interpretation
+- Magnetic field strength decreases with distance  
+- Direction is determined by the right-hand thumb rule  
+
+### Computational Approach
+Magnetic field values are calculated for different distances and plotted to demonstrate magnetic field decay.
+
+---
+
+## 4️⃣ Maxwell’s Equations
+
+Maxwell’s equations unify electricity and magnetism and predict the existence of *electromagnetic waves*.
+
+### Differential Form
+∇ · E = ρ / ϵ₀        (Gauss’s Law – Electric) 
+∇ · B = 0            (Gauss’s Law – Magnetism) 
+∇ × E = −∂B/∂t       (Faraday’s Law) 
+∇ × B = μ₀J + μ₀ϵ₀∂E/∂t (Ampère–Maxwell Law)
+---
+---
+
+## 🌊 Maxwell’s Equations – 1D Simulation
+
+### Description
+In one dimension, Maxwell’s equations describe *electromagnetic wave propagation* along a single axis.
+
+### Numerical Method
+- Finite Difference Time Domain (FDTD)
+- Discretized space and time
+
+### Outcome
+- Demonstrates oscillatory electric and magnetic fields  
+- Visualizes EM wave behavior  
+
+---
+
+## 🌐 Maxwell’s Equations – 2D Simulation
+
+### Description
+In two dimensions, electromagnetic fields evolve on a planar grid.
+
+### Numerical Method
+- Finite difference spatial derivatives
+- Field evolution over time
+
+### Outcome
+- Demonstrates interaction of fields in space  
+- Useful for surface and planar EM problems  
+
+---
+
+## 🌌 Maxwell’s Equations – 3D Representation
+
+### Description
+A simplified numerical representation of three-dimensional electric field components.
+
+### Purpose
+- Visualize time evolution of Ex, Ey, and Ez  
+- Introduce 3D electromagnetic behavior  
+
+### Educational Value
+- Foundation for advanced 3D FDTD solvers  
+- Bridges theory with real-world EM simulations  
+
+---
+
+## GRAPHICAL VISUALIZATION
+
+All simulations generate numerical data files that are plotted using *gnuplot*, allowing clear visualization of:
+- Force vs distance
+- Magnetic field vs distance
+- Field evolution vs time
+
+Visualization plays a crucial role in understanding physical laws and validating numerical results.
+
+---
+
+##  REQUIREMENTS
+
+- C++ Compiler (g++)
+- GNU Make
+- gnuplot
+
+---
+
+##  HOW TO RUN
+
+```bash
+make
+make plot-coulomb
+make plot-gauss
+make plot-biot
+make plot-maxwell1d
+make plot-maxwell2d
+make plot-maxwell3d
