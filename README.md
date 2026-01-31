@@ -141,12 +141,14 @@ A simplified numerical representation of three-dimensional electric field compon
 - GNU Make
 
 ---
-## 🚀 HOW TO RUN
+##  HOW TO RUN
 
 ```bash
  .\a.exe
  .\gauss_test.exe
  .\biot_savart_test.exe
+ .\maxwell1d_test.exe
+ .\maxwell2d_test.exe
  .\maxwell3d_test.exe
 
 
