@@ -37,7 +37,7 @@ F = (1 / 4πϵ₀) × (q₁ q₂ / r²)
 - Force is directly proportional to the product of charges  
 - Force is inversely proportional to the square of distance  
 - Like charges repel, unlike charges attract
--  
+  
 ---
 ### Computational Approach
 The force is computed numerically for varying distances, and the inverse-square nature is verified through graphical plots.
