@@ -11,10 +11,10 @@ The aim of this project is to design and develop a modular *Electromagnetic Theo
 ------
 ##  FEATURES
 
-✔ Modular C++ library design  
-✔ Numerical implementation of EM laws  
-✔ 1D, 2D, and 3D Maxwell equation solvers   
-✔ Clean, academic, and extendable structure  
+ Modular C++ library design  
+ Numerical implementation of EM laws  
+ 1D, 2D, and 3D Maxwell equation solvers   
+ Clean, academic, and extendable structure  
 
 ------
 ##  THEORY
