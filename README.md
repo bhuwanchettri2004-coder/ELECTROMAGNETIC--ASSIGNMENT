@@ -1,20 +1,19 @@
 #  Electromagnetic Theory Library (C++)
 
-A comprehensive *C++ Electromagnetic Theory library* that numerically implements the *fundamental laws of electromagnetism* and visualizes their physical behavior using graphical plots.  
+A comprehensive *C++ Electromagnetic Theory library* that numerically implements the *fundamental laws of electromagnetism* and visualizes their physical behavior .  
 This project bridges *theoretical electromagnetism* with *computational physics*.
 
 -----
 ##  AIM
 
-The aim of this project is to design and develop a modular *Electromagnetic Theory library in C++* that numerically implements the fundamental laws of electromagnetism—*Coulomb’s Law, Gauss’s Law, Biot–Savart Law, and Maxwell’s Equations (1D, 2D, and 3D)*—and to visualize their behavior through computational simulations and graphs.
+The aim of this project is to design and develop a modular *Electromagnetic Theory library in C++* that numerically implements the fundamental laws of electromagnetism—*Coulomb’s Law, Gauss’s Law, Biot–Savart Law, and Maxwell’s Equations (1D, 2D, and 3D)*—and to visualize their behavior through computational simulations .
 
 ------
 ##  FEATURES
 
 ✔ Modular C++ library design  
 ✔ Numerical implementation of EM laws  
-✔ 1D, 2D, and 3D Maxwell equation solvers  
-✔ Graphical visualization using *gnuplot*  
+✔ 1D, 2D, and 3D Maxwell equation solvers   
 ✔ Clean, academic, and extendable structure  
 
 ------
@@ -40,7 +39,7 @@ F = (1 / 4πϵ₀) × (q₁ q₂ / r²)
   
 ---
 ### Computational Approach
-The force is computed numerically for varying distances, and the inverse-square nature is verified through graphical plots.
+The force is computed numerically for varying distances, and the inverse-square nature is verified through analysis of the numerical data.
 
 ---
 
@@ -77,7 +76,7 @@ Magnetic field values are calculated for different distances and plotted to demo
 
 ---
 
-## 4️⃣ Maxwell’s Equations
+## (4) Maxwell’s Equations
 
 Maxwell’s equations unify electricity and magnetism and predict the existence of *electromagnetic waves*.
 
@@ -89,7 +88,7 @@ Maxwell’s equations unify electricity and magnetism and predict the existence 
 ---
 ---
 
-## 🌊 Maxwell’s Equations – 1D Simulation
+## (5) Maxwell’s Equations – 1D Simulation
 
 ### Description
 In one dimension, Maxwell’s equations describe *electromagnetic wave propagation* along a single axis.
@@ -104,7 +103,7 @@ In one dimension, Maxwell’s equations describe *electromagnetic wave propagati
 
 ---
 
-## 🌐 Maxwell’s Equations – 2D Simulation
+## (6) Maxwell’s Equations – 2D Simulation
 
 ### Description
 In two dimensions, electromagnetic fields evolve on a planar grid.
@@ -119,7 +118,7 @@ In two dimensions, electromagnetic fields evolve on a planar grid.
 
 ---
 
-## 🌌 Maxwell’s Equations – 3D Representation
+## (7) Maxwell’s Equations – 3D Representation
 
 ### Description
 A simplified numerical representation of three-dimensional electric field components.
@@ -134,32 +133,13 @@ A simplified numerical representation of three-dimensional electric field compon
 
 ---
 
-## GRAPHICAL VISUALIZATION
 
-All simulations generate numerical data files that are plotted using *gnuplot*, allowing clear visualization of:
-- Force vs distance
-- Magnetic field vs distance
-- Field evolution vs time
-
-Visualization plays a crucial role in understanding physical laws and validating numerical results.
-
----
 
 ##  REQUIREMENTS
 
 - C++ Compiler (g++)
 - GNU Make
-- gnuplot
 
 ---
 
-##  HOW TO RUN
 
-```bash
-make
-make plot-coulomb
-make plot-gauss
-make plot-biot
-make plot-maxwell1d
-make plot-maxwell2d
-make plot-maxwell3d
